@@ -16,7 +16,7 @@ namespace ContaCorrenteConsoleApp
             {
                 this.saldo += quantidade;
                 Movimentacao objeto = new Movimentacao();
-                objeto.tipo = TipoMovimentacao.credito;
+                objeto.tipo = TipoMovimentacao.debito;
                 objeto.tipo2 = TipoAcao.depositar;
                 objeto.valor = quantidade;
 
@@ -78,13 +78,13 @@ namespace ContaCorrenteConsoleApp
                 Console.WriteLine("Saldo da conta: R$" + this.saldo);
                 Console.WriteLine();
 
-                Console.WriteLine("Tipo da Ação(tipo da movimentação) - valor da movimentação ");
+                Console.WriteLine("Tipo da Ação(tipo da movimentação) - valor da movimentação");
 
                 for (int i = 0; i < movimentacoes.Length; i++)
                 {
                     if(movimentacoes[i] != null)
                     {
-                        Console.WriteLine(movimentacoes[i].tipo2 + " (" + movimentacoes[i].tipo + ") - " + movimentacoes[i].valor);
+                        Console.WriteLine(movimentacoes[i].tipo2 + "(" + movimentacoes[i].tipo + ") - R$" + movimentacoes[i].valor);
                         
                     }
                 }
